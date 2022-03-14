@@ -1,0 +1,42 @@
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+	min-height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background: rgb(34, 193, 195);
+	background: linear-gradient(
+		0deg,
+		rgba(34, 193, 195, 1) 0%,
+		rgba(253, 187, 45, 1) 100%
+	);
+}
+
+form {
+	height: 120px;
+	width: 350px;
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	flex-flow: column nowrap;
+	border: 2px solid gray;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 30px auto;
+}
+label {
+	font-size: 2rem;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+input{
+	font-size: 1.8rem;
+	padding: 5px;
+	border-radius: 5px;
+	border: 2px solid grey;
+}
+button{
+	font-size: 2rem;
+	padding: 4px;
+}
