@@ -1,8 +1,3 @@
-// let requestURl =
-// 	"http://api.openweathermap.org/data/2.5/weather?q=Hanoi,vn&units=metric&callback=test&appid=071ccef383eb80fc1abfd8e75526cb0d";
-// fetch(requestURl, { mode: "cors" })
-// 	.then((result) => result.text())
-// 	.then((text) => console.log(text));
 const img = document.querySelector("img");
 const form = document.querySelector("form");
 const input = document.querySelector("input");
@@ -11,6 +6,7 @@ function submit(e) {
 	if (input.value === "") {
 		return;
 	} else {
+		img.src = "style/loading.gif";
 		getGif(input.value);
 	}
 	e.preventDefault();

@@ -13,7 +13,12 @@ body {
 		rgba(253, 187, 45, 1) 100%
 	);
 }
-
+div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: column nowrap;
+}
 form {
 	height: 120px;
 	width: 350px;
@@ -24,19 +29,20 @@ form {
 	border: 2px solid gray;
 	border-radius: 10px;
 	padding: 10px;
-	margin: 30px auto;
+	margin-bottom: 30px;
 }
 label {
 	font-size: 2rem;
-	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+		"Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-input{
+input {
 	font-size: 1.8rem;
 	padding: 5px;
 	border-radius: 5px;
 	border: 2px solid grey;
 }
-button{
+button {
 	font-size: 2rem;
 	padding: 4px;
 }
