@@ -1,11 +1,11 @@
+* {
+	box-sizing: border-box;
+}
+
 html {
 	font-size: 62.5%;
 }
 body {
-	display: flex;
-	min-height: 100vh;
-	justify-content: center;
-	align-items: center;
 	background: rgb(34, 193, 195);
 	background: linear-gradient(
 		0deg,
@@ -13,7 +13,9 @@ body {
 		rgba(253, 187, 45, 1) 100%
 	);
 }
-div {
+#container {
+	width: 100%;
+	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -21,7 +23,7 @@ div {
 }
 form {
 	height: 120px;
-	width: 350px;
+	width: 400px;
 	background-color: white;
 	display: flex;
 	justify-content: space-around;
@@ -45,4 +47,19 @@ input {
 button {
 	font-size: 2rem;
 	padding: 4px;
+}
+
+img {
+	width: 550px;
+}
+
+@media screen and (max-width: 600px) {
+	img {
+		width: 95%;
+	}
+}
+@media screen and (max-width: 440px) {
+	form {
+		width: 95%;
+	}
 }
