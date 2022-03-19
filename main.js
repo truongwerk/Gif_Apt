@@ -20,7 +20,11 @@ function getGif(search) {
 			return response.json();
 		})
 		.then(function (response) {
-			console.log(response.data.images.original.url);
 			img.src = response.data.images.original.url;
+			console.log(response.data.images.original.url);
+		})
+		.catch(function (error) {
+			console.log(error);
+			img.src = "style/error.jpg";
 		});
 }
