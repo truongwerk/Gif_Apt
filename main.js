@@ -11,20 +11,18 @@ function submit(e) {
 	}
 	e.preventDefault();
 }
-function getGif(search) {
+
+async function getGif(search) {
 	let requestURl =
 		"https://api.giphy.com/v1/gifs/translate?api_key=QGNeNzbZXa32OwIvxGo9EmPpZb3eT3Bk&s=";
 	requestURl += search;
-	fetch(requestURl, { mode: "cors" })
-		.then(function (response) {
-			return response.json();
-		})
-		.then(function (response) {
-			img.src = response.data.images.original.url;
-			console.log(response.data.images.original.url);
-		})
-		.catch(function (error) {
-			console.log(error);
-			img.src = "style/error.jpg";
-		});
+	try {
+		const response = await fetch(requestURl, { mode: "cors" });
+		const gifData = await response.json();
+		img.src = gifData.data.images.original.url;
+		console.log(gifData.data.images.original.url);
+	} catch (error) {
+		console.error(error);
+		img.src = "style/error.jpg";
+	}
 }
